@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import RiseOfFarming from '../components/RiseOfFarming';
+import Solutions from '../components/Solutions';
 
 const pageTransition = {
   initial: { opacity: 0, y: 20 },
@@ -26,14 +27,14 @@ const Home = () => {
 
   useGSAP(() => {
     // Initial Hero Animation
-    gsap.fromTo('.nav-logo, .nav-link, .btn-outline, .hero-title, .hero-subtitle, .btn-filled', 
+    gsap.fromTo('.hero-title, .hero-subtitle, .btn-filled', 
       {
         y: 30,
-        opacity: 0,
+        autoAlpha: 0,
       },
       {
         y: 0,
-        opacity: 1,
+        autoAlpha: 1,
         duration: 1.2,
         stagger: 0.1,
         ease: 'power3.out',
@@ -45,11 +46,11 @@ const Home = () => {
     gsap.fromTo('.hero-image-wrapper',
       {
         y: 60,
-        opacity: 0,
+        autoAlpha: 0,
       },
       {
         y: 0,
-        opacity: 1,
+        autoAlpha: 1,
         duration: 1.5,
         ease: 'power3.out',
         delay: 0.4
@@ -149,6 +150,7 @@ const Home = () => {
       <Hero />
       <About />
       <RiseOfFarming />
+      <Solutions />
     </motion.div>
   );
 };
