@@ -204,6 +204,7 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  will-change: transform;
 }
 
 /* --- Button Text Animations (Awwwards Style) --- */
@@ -508,4 +509,505 @@ a {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.5;
+}
+
+/* --- Why Farmcult Page Styles --- */
+.why-farmcult-page {
+  width: 100%;
+}
+
+.wfc-header-section {
+  padding: 120px 5% 60px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wfc-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.wfc-main-title {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.wfc-main-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Hero Image */
+.wfc-hero-image-section {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 8rem;
+}
+
+.wfc-hero-image {
+  width: 100vw;
+  height: auto;
+  border-radius: 0;
+  display: block;
+  object-fit: cover;
+  will-change: transform, clip-path, opacity;
+}
+
+/* Features Grid */
+.wfc-features-section {
+  padding: 0 5% 8rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.wfc-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.wfc-feature-card {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+
+.wfc-feature-card--border {
+  border-left: 1px solid #DEDEDE;
+}
+
+.wfc-feature-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.wfc-feature-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.wfc-feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 53px;
+}
+
+.wfc-feature-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Foundation Section */
+.wfc-foundation-section, .wfc-team-section {
+  padding: 4rem 5% 8rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.wfc-foundation-inner, .wfc-team-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 6rem;
+  align-items: flex-start;
+}
+
+.wfc-team-inner {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.wfc-section-heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.wfc-founder-tag {
+  display: inline-flex;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.wfc-foundation-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.wfc-foundation-img-placeholder, .wfc-team-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background-color: #E0E0E0;
+  border-radius: 32px;
+}
+
+/* Banner */
+.wfc-about-banner {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  padding: 10rem 5%;
+  text-align: center;
+}
+
+.wfc-about-banner-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.wfc-about-banner-sub {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* Team Cards */
+.wfc-team-cards-section {
+  padding: 0 5% 8rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.wfc-team-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.wfc-team-card {
+  background: white;
+  border: 1px solid #DEDEDE;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.wfc-team-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+}
+
+.wfc-team-avatar {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #F0F0F0;
+}
+
+.wfc-team-card-info {
+  padding: 1.5rem;
+}
+
+.wfc-team-card-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.wfc-team-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.wfc-linkedin-icon {
+  color: var(--text-primary);
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.wfc-linkedin-icon:hover {
+  opacity: 1;
+  color: #0077b5;
+}
+
+.wfc-team-role-tag {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #F7F7F7;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Reviews */
+.wfc-reviews-section {
+  padding: 8rem 5%;
+  background-color: white;
+}
+
+.wfc-reviews-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wfc-reviews-sub {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.wfc-reviews-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 4rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.wfc-google-rating-card {
+  background: #F7F7F7;
+  padding: 3rem;
+  border-radius: 32px;
+  height: fit-content;
+}
+
+.wfc-google-label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.wfc-google-sublabel {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.wfc-google-score-row {
+  margin-top: 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.wfc-google-score {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.wfc-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.wfc-review-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.wfc-review-card {
+  padding: 2rem;
+  background: #F7F7F7;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wfc-review-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wfc-review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.wfc-avatar-green { background-color: #8DC83A; }
+.wfc-avatar-blue { background-color: #4A90E2; }
+.wfc-avatar-orange { background-color: #F5A623; }
+
+.wfc-review-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.wfc-review-author-row {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.wfc-review-author-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.wfc-review-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Contact */
+.wfc-contact-section {
+  padding: 8rem 5%;
+}
+
+.wfc-contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  background-color: var(--text-primary);
+  color: white;
+  padding: 6rem;
+  border-radius: 48px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.wfc-contact-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.wfc-contact-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  opacity: 0.8;
+  margin-bottom: 4rem;
+}
+
+.wfc-contact-detail-group {
+  margin-bottom: 2.5rem;
+}
+
+.wfc-contact-detail-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  margin-bottom: 0.8rem;
+}
+
+.wfc-contact-detail-value {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.wfc-contact-form-panel {
+  background: white;
+  color: var(--text-primary);
+  padding: 4rem;
+  border-radius: 32px;
+}
+
+.wfc-form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.wfc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wfc-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.wfc-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wfc-form-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.wfc-form-input, .wfc-form-textarea {
+  padding: 1rem;
+  border: 1px solid #DEDEDE;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.wfc-form-input:focus, .wfc-form-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.wfc-btn-send {
+  margin-top: 1rem;
+  background: var(--text-primary);
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .wfc-features-grid { grid-template-columns: repeat(2, 1fr); }
+  .wfc-feature-card:nth-child(2) { border-right: 1px solid #DEDEDE; }
+  .wfc-feature-card--border { border-left: none; }
+  
+  .wfc-reviews-content { grid-template-columns: 1fr; }
+  .wfc-review-cards-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .wfc-foundation-inner, .wfc-team-inner, .wfc-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .wfc-contact-inner { padding: 3rem; }
+  .wfc-team-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .wfc-features-grid, .wfc-team-cards-grid, .wfc-review-cards-row, .wfc-form-row {
+    grid-template-columns: 1fr;
+  }
 }

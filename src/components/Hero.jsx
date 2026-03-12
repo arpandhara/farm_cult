@@ -18,7 +18,13 @@ const Hero = () => {
         </button>
       </div>
       <div className="hero-image-wrapper">
-        <img src="/Hero%20Image.svg" alt="Farmcult Modern Farming" className="hero-bg-img" />
+        <img 
+          src="/Hero%20Image.svg" 
+          alt="Farmcult Modern Farming" 
+          className="hero-bg-img"
+          decoding="async"
+          loading="lazy"
+        />
       </div>
     </section>
   );
