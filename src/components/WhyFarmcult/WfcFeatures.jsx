@@ -2,37 +2,39 @@ import React from 'react';
 
 const WfcFeatures = () => {
   return (
-    <section className="wfc-features-section">
-      <div className="wfc-features-grid">
-        <div className="wfc-feature-card">
-          <div className="wfc-feature-icon">
-            <img src="/icons/icon 1.svg" alt="Technology-led icon" />
+    <section className="wfc-features-section px-[5%] pb-[8rem] max-w-[1600px] mx-auto">
+      <div className="wfc-features-grid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-0">
+        
+        <div className="wfc-feature-card py-16 px-12 flex flex-col transition-colors duration-300 ease-in-out">
+          <div className="wfc-feature-icon w-12 h-12 flex items-center justify-center mb-6">
+            <img src="/icons/icon 1.svg" alt="Technology-led icon" className="w-full h-full" />
           </div>
-          <h3 className="wfc-feature-title">Technology-led</h3>
-          <p className="wfc-feature-desc">
+          <h3 className="wfc-feature-title text-[1.5rem] font-semibold mb-[53px] text-text-primary">Technology-led</h3>
+          <p className="wfc-feature-desc text-[1rem] text-text-secondary leading-[1.6]">
             Automation, IoT monitoring, and data-based decision-making systems.
           </p>
         </div>
 
-        <div className="wfc-feature-card wfc-feature-card--border">
-          <div className="wfc-feature-icon">
-            <img src="/icons/icon 2.svg" alt="Sustainable icon" />
+        <div className="wfc-feature-card py-16 px-12 flex flex-col transition-colors duration-300 ease-in-out border-[#DEDEDE] border-t sm:border-t-0 sm:border-l sm:border-r xl:border-r-0 xl:border-l">
+          <div className="wfc-feature-icon w-12 h-12 flex items-center justify-center mb-6">
+            <img src="/icons/icon 2.svg" alt="Sustainable icon" className="w-full h-full" />
           </div>
-          <h3 className="wfc-feature-title">Sustainable</h3>
-          <p className="wfc-feature-desc">
+          <h3 className="wfc-feature-title text-[1.5rem] font-semibold mb-[53px] text-text-primary">Sustainable</h3>
+          <p className="wfc-feature-desc text-[1rem] text-text-secondary leading-[1.6]">
             Less water usage and no soil dependency, build for long-term environmental balance.
           </p>
         </div>
 
-        <div className="wfc-feature-card wfc-feature-card--border">
-          <div className="wfc-feature-icon">
-            <img src="/icons/icon 3.svg" alt="Scaleable icon" />
+        <div className="wfc-feature-card py-16 px-12 flex flex-col transition-colors duration-300 ease-in-out border-[#DEDEDE] border-t xl:border-t-0 xl:border-l sm:col-span-2 xl:col-span-1">
+          <div className="wfc-feature-icon w-12 h-12 flex items-center justify-center mb-6">
+            <img src="/icons/icon 3.svg" alt="Scaleable icon" className="w-full h-full" />
           </div>
-          <h3 className="wfc-feature-title">Scaleable</h3>
-          <p className="wfc-feature-desc">
+          <h3 className="wfc-feature-title text-[1.5rem] font-semibold mb-[53px] text-text-primary">Scaleable</h3>
+          <p className="wfc-feature-desc text-[1rem] text-text-secondary leading-[1.6]">
             Structured systems designed to expand smoothly from small to large farms.
           </p>
         </div>
+
       </div>
     </section>
   );

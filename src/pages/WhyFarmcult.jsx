@@ -11,7 +11,8 @@ import WfcFoundation from '../components/WhyFarmcult/WfcFoundation';
 import WfcBanner from '../components/WhyFarmcult/WfcBanner';
 import WfcTeam from '../components/WhyFarmcult/WfcTeam';
 import WfcReviews from '../components/WhyFarmcult/WfcReviews';
-import WfcContact from '../components/WhyFarmcult/WfcContact';
+import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
 
 const pageTransition = {
   initial: { opacity: 0, y: 20 },
@@ -31,80 +32,61 @@ const WhyFarmcult = () => {
   const containerRef = useRef();
 
   useGSAP(() => {
-    // Reveal Animations for Why Farmcult Page
-    gsap.from('.wfc-main-title, .wfc-main-subtitle, .wfc-label', {
-      scrollTrigger: {
-        trigger: '.wfc-header-section',
-        start: 'top 80%',
-      },
-      y: 40,
-      opacity: 0,
-      duration: 1.2,
-      stagger: 0.2,
-      ease: 'power3.out'
-    });
+    // Header section is above the fold — animate on load, not scroll
+    gsap.fromTo(
+      '.wfc-label, .wfc-main-title, .wfc-main-subtitle',
+      { y: 40, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: 1.2, stagger: 0.2, ease: 'power3.out', delay: 0.3 }
+    );
 
-    gsap.from('.wfc-hero-image', {
-      scrollTrigger: {
-        trigger: '.wfc-hero-image-section',
-        start: 'top 85%',
-      },
-      clipPath: 'inset(10% 20% 10% 20% round 0px)',
-      opacity: 0,
-      duration: 1.5,
-      ease: 'power4.inOut'
-    });
+    // Hero image reveal on scroll
+    gsap.fromTo('.wfc-hero-image',
+      { clipPath: 'inset(10% 20% 10% 20% round 0px)', autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.wfc-hero-image-section', start: 'top 85%' },
+        clipPath: 'inset(0% 0% 0% 0% round 0px)',
+        autoAlpha: 1,
+        duration: 1.5,
+        ease: 'power4.inOut'
+      }
+    );
 
-    gsap.from('.wfc-feature-card', {
-      scrollTrigger: {
-        trigger: '.wfc-features-grid',
-        start: 'top 85%',
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: 'power2.out'
-    });
+    // Feature cards
+    gsap.fromTo('.wfc-feature-card',
+      { y: 50, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.wfc-features-grid', start: 'top 85%' },
+        y: 0, autoAlpha: 1, duration: 1, stagger: 0.2, ease: 'power2.out'
+      }
+    );
 
-    gsap.from('.wfc-section-heading, .wfc-founder-tag, .wfc-foundation-desc', {
-      scrollTrigger: {
-        trigger: '.wfc-foundation-section',
-        start: 'top 80%',
-      },
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.15,
-      ease: 'power3.out'
-    });
+    // Foundation text
+    gsap.fromTo('.wfc-section-heading, .wfc-founder-tag, .wfc-foundation-desc',
+      { y: 30, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.wfc-foundation-section', start: 'top 80%' },
+        y: 0, autoAlpha: 1, duration: 1, stagger: 0.15, ease: 'power3.out'
+      }
+    );
 
-    gsap.from('.wfc-team-card', {
-      scrollTrigger: {
-        trigger: '.wfc-team-cards-grid',
-        start: 'top 85%',
-      },
-      scale: 0.9,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: 'power2.out'
-    });
+    // Team cards
+    gsap.fromTo('.wfc-team-card',
+      { scale: 0.9, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.wfc-team-cards-grid', start: 'top 85%' },
+        scale: 1, autoAlpha: 1, duration: 0.8, stagger: 0.1, ease: 'power2.out'
+      }
+    );
 
-    gsap.from('.wfc-review-card', {
-      scrollTrigger: {
-        trigger: '.wfc-review-cards-row',
-        start: 'top 85%',
-      },
-      x: 30,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: 'power2.out'
-    });
+    // Review cards
+    gsap.fromTo('.wfc-review-card',
+      { x: 30, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.wfc-review-cards-row', start: 'top 85%' },
+        x: 0, autoAlpha: 1, duration: 1, stagger: 0.2, ease: 'power2.out'
+      }
+    );
 
-    // Small delay to allow framer-motion to render the new component fully
-    // before recalculating ScrollTrigger positions.
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
@@ -113,7 +95,7 @@ const WhyFarmcult = () => {
 
   return (
     <motion.div 
-      className="why-farmcult-page" 
+      className="why-farmcult-page w-full" 
       ref={containerRef}
       variants={pageTransition}
       initial="initial"
@@ -128,7 +110,8 @@ const WhyFarmcult = () => {
       <WfcBanner />
       <WfcTeam />
       <WfcReviews />
-      <WfcContact />
+      <ContactSection />
+      <Footer />
     </motion.div>
   );
 };

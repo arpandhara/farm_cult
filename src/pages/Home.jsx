@@ -7,17 +7,24 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import RiseOfFarming from '../components/RiseOfFarming';
 import Solutions from '../components/Solutions';
+import SmartTechnology from '../components/SmartTechnology';
+import CaseStudy from '../components/CaseStudy';
+import FarmcultMedia from '../components/FarmcultMedia';
+import ParticipantsReviews from '../components/ParticipantsReviews';
+import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
 
+// FIX 1: Removed 'y' offset from pageTransition. 
+// Framer Motion translating the wrapper while GSAP translates the children 
+// creates nested transform conflicts (stuttering) on load.
 const pageTransition = {
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0 },
   animate: { 
     opacity: 1, 
-    y: 0, 
     transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } 
   },
   exit: { 
     opacity: 0, 
-    y: -20, 
     transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } 
   }
 };
@@ -26,35 +33,16 @@ const Home = () => {
   const homeRef = useRef();
 
   useGSAP(() => {
-    // Initial Hero Animation
+    // Hero text — begins as navbar finishes its stagger for a seamless 2nd beat
     gsap.fromTo('.hero-title, .hero-subtitle, .btn-filled', 
-      {
-        y: 30,
-        autoAlpha: 0,
-      },
-      {
-        y: 0,
-        autoAlpha: 1,
-        duration: 1.2,
-        stagger: 0.1,
-        ease: 'power3.out',
-        delay: 0.2
-      }
+      { y: 30, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: 1.1, stagger: 0.12, ease: 'power3.out', delay: 0.4 }
     );
 
-    // Initial Hero Image Entrance Animation
+    // Hero image — 3rd beat, rises as the text settles
     gsap.fromTo('.hero-image-wrapper',
-      {
-        y: 60,
-        autoAlpha: 0,
-      },
-      {
-        y: 0,
-        autoAlpha: 1,
-        duration: 1.5,
-        ease: 'power3.out',
-        delay: 0.4
-      }
+      { y: 60, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: 1.4, ease: 'power3.out', delay: 0.65 }
     );
 
     // Parallax Effect on Hero Image
@@ -67,74 +55,50 @@ const Home = () => {
       },
       y: 150,
       scale: 1.05,
+      ease: 'none', // FIX 2: Added ease: 'none' so the parallax doesn't lag behind the scrollbar
     });
 
     // About Section Animations
-    gsap.from('.about-header-text, .about-header-link', {
-      scrollTrigger: {
-        trigger: '.about-container',
-        start: 'top 80%',
-      },
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: 'power3.out'
-    });
+    gsap.fromTo('.about-header-text, .about-header-link',
+      { y: 30, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.about-container', start: 'top 80%' },
+        y: 0, autoAlpha: 1, duration: 1, stagger: 0.2, ease: 'power3.out'
+      }
+    );
 
-    gsap.from('.feature-item', {
-      scrollTrigger: {
-        trigger: '.about-features-panel',
-        start: 'top 85%',
-      },
-      y: 20,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: 'power2.out'
-    });
+    gsap.fromTo('.feature-item',
+      { y: 20, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.about-features-panel', start: 'top 85%' },
+        y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.15, ease: 'power2.out'
+      }
+    );
 
     // Rise of Farming Animations
-    gsap.from('.rise-title, .rise-desc', {
-      scrollTrigger: {
-        trigger: '.rise-container',
-        start: 'top 75%',
-      },
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: 'power3.out'
-    });
+    gsap.fromTo('.rise-title, .rise-desc',
+      { y: 30, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.rise-container', start: 'top 75%' },
+        y: 0, autoAlpha: 1, duration: 1, stagger: 0.2, ease: 'power3.out'
+      }
+    );
 
-    gsap.from('.state-capsule', {
-      scrollTrigger: {
-        trigger: '.states-capsule-grid',
-        start: 'top 85%',
-      },
-      scale: 0.8,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.05,
-      ease: 'back.out(1.5)'
-    });
+    gsap.fromTo('.state-capsule',
+      { scale: 0.8, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.states-capsule-grid', start: 'top 85%' },
+        scale: 1, autoAlpha: 1, duration: 0.6, stagger: 0.05, ease: 'back.out(1.5)'
+      }
+    );
 
-    gsap.from('.stat-card', {
-      scrollTrigger: {
-        trigger: '.rise-stats-grid',
-        start: 'top 90%',
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: 'power3.out'
-    });
-
-    // Refresh ScrollTrigger slightly later to allow Framer Motion to mount correctly
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 100);
+    gsap.fromTo('.stat-card',
+      { y: 40, autoAlpha: 0 },
+      {
+        scrollTrigger: { trigger: '.rise-stats-grid', start: 'top 90%' },
+        y: 0, autoAlpha: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out'
+      }
+    );
 
   }, { scope: homeRef });
 
@@ -145,12 +109,19 @@ const Home = () => {
       animate="animate"
       exit="exit"
       ref={homeRef}
+      // FIX 3: Accurately recalculates trigger positions once the entrance fade is totally finished
       onAnimationComplete={() => ScrollTrigger.refresh()}
     >
       <Hero />
       <About />
       <RiseOfFarming />
       <Solutions />
+      <SmartTechnology />
+      <CaseStudy />
+      <FarmcultMedia />
+      <ParticipantsReviews />
+      <ContactSection />
+      <Footer />
     </motion.div>
   );
 };

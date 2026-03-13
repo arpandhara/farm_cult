@@ -25,7 +25,7 @@ const ScrollToTop = () => {
 
 const AnimatedRoutes = () => {
   const location = useLocation();
-  
+
   return (
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
@@ -64,7 +64,7 @@ function App() {
 
   return (
     <Router>
-      <div className="app-container" ref={containerRef}>
+      <div className="overflow-clip min-h-screen relative" ref={containerRef}>
         <ScrollToTop />
         <Navbar />
         <AnimatedRoutes />
