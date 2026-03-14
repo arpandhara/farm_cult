@@ -10,7 +10,7 @@ const About = () => {
           <h2 className="section-title text-[clamp(2rem,3.5vw,3rem)] font-medium mb-4 text-text-primary tracking-[-0.02em]">
             Cultivating For Tomorrow
           </h2>
-          <p className="section-subtitle text-[clamp(1rem,1.5vw,1.15rem)] text-text-secondary leading-[1.6]">
+          <p className="section-subtitle text-[clamp(1rem,1.5vw,1.15rem)] text-text-secondary leading-[2]">
             Farmcult uses technology to build farming systems that are easy to manage, sustainable, and designed to grow over time.
           </p>
         </div>
@@ -43,7 +43,7 @@ const About = () => {
                 <h3 className="feature-title text-xl font-semibold font-inter mb-2 text-text-primary tracking-[-0.01em]">
                   Technology-led
                 </h3>
-                <p className="feature-desc text-[0.95rem] text-text-secondary leading-[1.5]">
+                <p className="feature-desc text-[0.95rem] text-text-secondary leading-[29px]">
                   Automation, monitoring, and data-based decisions
                 </p>
               </div>
@@ -57,7 +57,7 @@ const About = () => {
                 <h3 className="feature-title text-xl font-semibold font-inter mb-2 text-text-primary tracking-[-0.01em]">
                   Sustainable
                 </h3>
-                <p className="feature-desc text-[0.95rem] text-text-secondary leading-[1.5]">
+                <p className="feature-desc text-[0.95rem] text-text-secondary leading-[29px]">
                   Less water. No pesticides. Cleaner farming.
                 </p>
               </div>
@@ -71,7 +71,7 @@ const About = () => {
                 <h3 className="feature-title text-xl font-semibold font-inter mb-2 text-text-primary tracking-[-0.01em]">
                   Scaleable
                 </h3>
-                <p className="feature-desc text-[0.95rem] text-text-secondary leading-[1.5]">
+                <p className="feature-desc text-[0.95rem] text-text-secondary leading-[29px]">
                   Systems that can grow from small to large farms
                 </p>
               </div>

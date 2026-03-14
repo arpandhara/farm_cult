@@ -13,7 +13,7 @@ const RiseOfFarming = () => {
             <h2 className="rise-title text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.2] text-text-primary">
               The Rise of Modern<br />Farming in India
             </h2>
-            <p className="rise-desc text-[clamp(1rem,1.2vw,1.15rem)] text-text-secondary leading-[1.6]">
+            <p className="rise-desc text-[clamp(1rem,1.2vw,1.15rem)] text-text-secondary leading-[2]">
               Rapid urban demand, water stress, and government support are accelerating hydroponic adoption across key Indian states.
             </p>
             
@@ -40,24 +40,24 @@ const RiseOfFarming = () => {
           
           <div className="stat-card flex flex-col gap-[53px] px-0 sm:px-8 border-r-0 sm:border-r border-[#DEDEDE]">
             <h3 className="stat-value text-[clamp(1.75rem,2.5vw,2.25rem)] font-medium text-text-primary">Over 30%</h3>
-            <p className="stat-label text-[0.95rem] text-text-secondary leading-[1.5]">ROI on projects with hydroponics / modern farming</p>
+            <p className="stat-label text-[0.95rem] text-text-secondary leading-[29px]">ROI on projects with hydroponics / modern farming</p>
           </div>
           
           {/* Note: This card specifically drops its border at the Tablet breakpoint just like your media query */}
           <div className="stat-card flex flex-col gap-[53px] px-0 sm:px-8 border-r-0 lg:border-r border-[#DEDEDE]">
             <h3 className="stat-value text-[clamp(1.75rem,2.5vw,2.25rem)] font-medium text-text-primary">80–90%</h3>
-            <p className="stat-label text-[0.95rem] text-text-secondary leading-[1.5]">Less water usage compared to soil farming</p>
+            <p className="stat-label text-[0.95rem] text-text-secondary leading-[29px]">Less water usage compared to soil farming</p>
           </div>
           
           <div className="stat-card flex flex-col gap-[53px] px-0 sm:px-8 border-r-0 sm:border-r border-[#DEDEDE]">
             <h3 className="stat-value text-[clamp(1.75rem,2.5vw,2.25rem)] font-medium text-text-primary">Up to 5x</h3>
-            <p className="stat-label text-[0.95rem] text-text-secondary leading-[1.5]">Higher yield per acre in controlled systems</p>
+            <p className="stat-label text-[0.95rem] text-text-secondary leading-[29px]">Higher yield per acre in controlled systems</p>
           </div>
           
           {/* Completely borderless on the right */}
           <div className="stat-card borderless-right flex flex-col gap-[53px] px-0 sm:px-8 border-r-0">
             <h3 className="stat-value text-[clamp(1.75rem,2.5vw,2.25rem)] font-medium text-text-primary">Up to 50%</h3>
-            <p className="stat-label text-[0.95rem] text-text-secondary leading-[1.5]">Capital subsidy for eligible projects</p>
+            <p className="stat-label text-[0.95rem] text-text-secondary leading-[29px]">Capital subsidy for eligible projects</p>
           </div>
 
         </div>

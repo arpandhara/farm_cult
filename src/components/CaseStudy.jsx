@@ -70,11 +70,11 @@ const CaseStudy = () => {
             <span className="font-normal block">24,000 Plants.</span>
           </h2>
 
-          <p className="case-study-desc shrink-0 text-[clamp(0.95rem,1.1vw,1.1rem)] text-text-primary leading-[1.7] mb-5 lg:mb-10 opacity-90 font-normal">
+          <p className="case-study-desc shrink-0 text-[clamp(0.95rem,1.1vw,1.1rem)] text-text-primary leading-[2] mb-5 opacity-90 font-normal">
             What was once idle land is now a working hydroponic farm. Results from Farmcult's first operational hydroponic farm in Garhmukteshwar.
           </p>
 
-          <div className="case-study-footer shrink-0 w-full flex justify-between items-center border-t border-gray-100">
+          <div className="case-study-footer shrink-0 w-full flex justify-between items-center">
             <span className="case-study-date text-[#8DC83A] font-bold text-lg">
               Jan 2025
             </span>

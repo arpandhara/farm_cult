@@ -94,7 +94,7 @@ const ParticipantsReviews = () => {
               <div className="flex justify-center mb-6">
                 <img src={review.stars} alt="Rating" className="h-5" />
               </div>
-              <p className="text-[0.95rem] text-text-primary leading-[1.7] opacity-90 text-center mb-8 flex-1">
+              <p className="text-[0.95rem] text-text-primary leading-[29px] opacity-90 text-center mb-8 flex-1">
                 "{review.content}"
               </p>
               <div className="flex flex-col items-center mt-auto">
@@ -110,7 +110,7 @@ const ParticipantsReviews = () => {
             <div key={review.id} className="review-card-item md:col-span-2 bg-white rounded-[24px] p-6 lg:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-50 flex items-center gap-6">
               <img src={review.image} alt="Reviewer" className="w-14 h-14 rounded-full flex-shrink-0" />
               <div className="flex-1">
-                <p className="text-[0.95rem] text-text-primary leading-[1.6] opacity-90 mb-2">
+                <p className="text-[0.95rem] text-text-primary leading-[29px] opacity-90 mb-2">
                   "{review.content}"
                 </p>
                 <img src={review.stars} alt="Rating" className="h-4" />

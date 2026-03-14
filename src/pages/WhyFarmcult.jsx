@@ -10,7 +10,7 @@ import WfcFeatures from '../components/WhyFarmcult/WfcFeatures';
 import WfcFoundation from '../components/WhyFarmcult/WfcFoundation';
 import WfcBanner from '../components/WhyFarmcult/WfcBanner';
 import WfcTeam from '../components/WhyFarmcult/WfcTeam';
-import WfcReviews from '../components/WhyFarmcult/WfcReviews';
+import ParticipantsReviews from '../components/ParticipantsReviews';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
@@ -78,14 +78,6 @@ const WhyFarmcult = () => {
       }
     );
 
-    // Review cards
-    gsap.fromTo('.wfc-review-card',
-      { x: 30, autoAlpha: 0 },
-      {
-        scrollTrigger: { trigger: '.wfc-review-cards-row', start: 'top 85%' },
-        x: 0, autoAlpha: 1, duration: 1, stagger: 0.2, ease: 'power2.out'
-      }
-    );
 
     setTimeout(() => {
       ScrollTrigger.refresh();
@@ -109,7 +101,7 @@ const WhyFarmcult = () => {
       <WfcFoundation />
       <WfcBanner />
       <WfcTeam />
-      <WfcReviews />
+      <ParticipantsReviews />
       <ContactSection />
       <Footer />
     </motion.div>

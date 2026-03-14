@@ -63,7 +63,7 @@ const FarmcultMedia = () => {
             </div>
 
             {/* Content */}
-            <h3 className="media-card-title text-[clamp(1.1rem,1.4vw,1.3rem)] font-medium text-text-primary leading-[1.4] mb-6 opacity-90 leading-10">
+            <h3 className="media-card-title text-[clamp(1.1rem,1.4vw,1.3rem)] font-medium text-text-primary leading-[2] mb-6 opacity-90">
               {item.title}
             </h3>
 

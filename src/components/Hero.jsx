@@ -11,7 +11,14 @@ const Hero = () => {
           Climate-smart, data-led farming models built for long-term growth.
         </p>
         {/* Added "group" class to the button to trigger the inner span hover animations */}
-        <button className="btn-filled group bg-text-primary text-bg-color border-none rounded-[40px] py-[0.8rem] px-8 font-medium text-base font-inter cursor-pointer transition-all duration-200 ease-in-out hover:bg-[#222222] hover:-translate-y-0.5">
+        <a 
+          href="#contact" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.lenis?.scrollTo('#contact');
+          }}
+          className="btn-filled group inline-block bg-text-primary text-bg-color border-none rounded-[40px] py-[0.8rem] px-8 font-medium text-base font-inter cursor-pointer transition-all duration-200 ease-in-out hover:bg-[#222222] hover:-translate-y-0.5"
+        >
           <span className="btn-text-wrapper relative inline-block overflow-hidden align-top">
             <span className="btn-text-inner block transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:-translate-y-full">
               Get Started
@@ -20,7 +27,7 @@ const Hero = () => {
               Get Started
             </span>
           </span>
-        </button>
+        </a>
       </div>
       <div className="hero-image-wrapper w-full h-screen overflow-hidden">
         <img 

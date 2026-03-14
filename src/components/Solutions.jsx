@@ -73,7 +73,7 @@ const Solutions = () => {
         <h2 className="solutions-title text-[clamp(2rem,3.5vw,2.5rem)] font-semibold mb-6 text-text-primary leading-[1.2]">
           Our Solutions
         </h2>
-        <p className="solutions-desc text-base text-[#333] leading-[2.2] max-w-[600px] mx-auto lg:mx-0">
+        <p className="solutions-desc text-base text-[#333] leading-[2] max-w-[600px] mx-auto lg:mx-0">
           From hands-free investing to <br className="hidden lg:block" />hands-on farming, we offer <br className="hidden lg:block" />flexible ways to work with <br className="hidden lg:block" />Farmcult based on your goals.
         </p>
       </div>
@@ -88,7 +88,7 @@ const Solutions = () => {
               <h3 className="solution-card-title text-[1.7rem] font-bold leading-[1.2]">Passive Income Model</h3>
             </div>
             <div className="solution-card-bottom relative z-10">
-              <p className="solution-card-desc text-[0.95rem] leading-[2] mb-6 text-[#F7F7F7]">
+              <p className="solution-card-desc text-[0.95rem] leading-[29px] mb-6 text-[#F7F7F7]">
                 Invest in a hydroponic farm while Farmcult manages operations end-to-end.
               </p>
               <button className="solution-btn w-full flex justify-between items-center bg-white text-text-primary border-none py-[0.85rem] px-6 rounded-[30px] text-[0.9rem] font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group">
@@ -104,7 +104,7 @@ const Solutions = () => {
               <h3 className="solution-card-title text-[1.7rem] font-bold leading-[1.2]">Turnkey Solution</h3>
             </div>
             <div className="solution-card-bottom relative z-10">
-              <p className="solution-card-desc text-[0.95rem] leading-[2] mb-6 text-[#F7F7F7]">
+              <p className="solution-card-desc text-[0.95rem] leading-[29px] mb-6 text-[#F7F7F7]">
                 Farmcult will build and handover a fully operational hydroponic farm on your land.
               </p>
               <button className="solution-btn w-full flex justify-between items-center bg-white text-text-primary border-none py-[0.85rem] px-6 rounded-[30px] text-[0.9rem] font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group">
@@ -120,7 +120,7 @@ const Solutions = () => {
               <h3 className="solution-card-title text-[1.7rem] font-bold leading-[1.2]">Education & Training</h3>
             </div>
             <div className="solution-card-bottom relative z-10">
-              <p className="solution-card-desc text-[0.95rem] leading-[2] mb-6 text-[#F7F7F7]">
+              <p className="solution-card-desc text-[0.95rem] leading-[29px] mb-6 text-[#F7F7F7]">
                 Learn hydroponic farming through practical training, workshops, and guidance.
               </p>
               <button className="solution-btn w-full flex justify-between items-center bg-white text-text-primary border-none py-[0.85rem] px-6 rounded-[30px] text-[0.9rem] font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-accent hover:text-white group">

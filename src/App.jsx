@@ -7,6 +7,7 @@ import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import WhyFarmcult from './pages/WhyFarmcult';
+import Technology from './pages/Technology';
 import './index.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +32,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/why-farmcult" element={<WhyFarmcult />} />
+        <Route path="/technology" element={<Technology />} />
       </Routes>
     </AnimatePresence>
   );
@@ -48,6 +50,7 @@ function App() {
     });
 
     lenis.on('scroll', ScrollTrigger.update);
+    window.lenis = lenis;
 
     const update = (time) => {
       lenis.raf(time * 1000);
@@ -59,6 +62,7 @@ function App() {
     return () => {
       gsap.ticker.remove(update);
       lenis.destroy();
+      window.lenis = null;
     };
   }, []);
 

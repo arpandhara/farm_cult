@@ -61,7 +61,7 @@ const SmartTechnology = () => {
         <h2 className="smart-tech-title text-[clamp(2.2rem,4vw,3rem)] mb-8 text-text-primary leading-[1.1] tracking-tight">
           Built on Smart <br /> Technology
         </h2>
-        <p className="smart-tech-desc text-[1.05rem] text-[#343434] opacity-90 leading-[1.8] mb-10 max-w-[400px]">
+        <p className="smart-tech-desc text-[1.05rem] text-[#343434] opacity-90 leading-[2] mb-10 max-w-[400px]">
           Smart systems run quietly in the background to keep farms operating smoothly. Technology helps reduce effort, improve consistency, and support better outcomes.
         </p>
 

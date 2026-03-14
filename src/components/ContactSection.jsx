@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactSection = () => {
   return (
-    <section className="contact-section relative min-h-[85vh] flex items-center py-20 lg:py-32 px-[5%] overflow-hidden bg-black">
+    <section id="contact" className="contact-section relative min-h-[85vh] flex items-center py-20 lg:py-32 px-[5%] overflow-hidden bg-black">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-60"
@@ -16,10 +16,10 @@ const ContactSection = () => {
           {/* Left Side: Info */}
           <div className="lg:w-1/2 text-white flex flex-col justify-between py-2">
             <div>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-medium font-outfit mb-8 leading-[1.1] tracking-tight">
+              <h2 className="text-6xl font-medium font-outfit mb-8 leading-[1.1] tracking-tight">
                 Build a Farm with Us
               </h2>
-              <p className="text-lg text-white/90 mb-12 leading-loose font-inter">
+              <p className="text-lg text-white/90 mb-12 leading-relaxed font-inter">
                 We work closely with landowners and investors to build sustainable hydroponic farms. From planning to operations, our team supports you at every stage.
               </p>
             </div>
@@ -27,14 +27,14 @@ const ContactSection = () => {
             {/* Location & Contact Info: Aligned to Bottom of Card */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-10">
               <div className="info-group">
-                <span className="block text-lg font-medium mb-4">Location</span>
-                <p className="text-lg leading-loose opacity-90">
+                <span className="block text-xl font-medium mb-4">Location</span>
+                <p className="text-md leading-[29px] opacity-100">
                   Ground Floor, T1, E-328, Sector 75, <br />Sahibzada Ajit Singh Nagar, Punjab
                 </p>
               </div>
               <div className="info-group">
-                <span className="block text-lg font-medium mb-4">Contact</span>
-                <p className="text-lg leading-loose opacity-90">
+                <span className="block text-xl font-medium mb-4">Contact</span>
+                <p className="text-md leading-[29px] opacity-100">
                   farmcult.company@gmail.com<br />
                   +91 9041104230
                 </p>
