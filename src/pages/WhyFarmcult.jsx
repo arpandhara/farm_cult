@@ -32,13 +32,6 @@ const WhyFarmcult = () => {
   const containerRef = useRef();
 
   useGSAP(() => {
-    // Header section is above the fold — animate on load, not scroll
-    gsap.fromTo(
-      '.wfc-label, .wfc-main-title, .wfc-main-subtitle',
-      { y: 40, autoAlpha: 0 },
-      { y: 0, autoAlpha: 1, duration: 1.2, stagger: 0.2, ease: 'power3.out', delay: 0.3 }
-    );
-
     // Hero image reveal on scroll
     gsap.fromTo('.wfc-hero-image',
       { clipPath: 'inset(10% 20% 10% 20% round 0px)', autoAlpha: 0 },

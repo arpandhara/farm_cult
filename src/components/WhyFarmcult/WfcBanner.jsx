@@ -31,7 +31,7 @@ const WfcBanner = ({
 
       {/* Content */}
       <div 
-        className={`wfc-about-banner-inner relative z-10 w-full max-w-[1400px] mx-auto px-[5%] ${
+        className={`wfc-about-banner-inner relative z-10 w-full max-w-[100vw] mx-auto px-[5%] ${
           isDark ? 'text-left' : 'text-center'
         }`}
       >
