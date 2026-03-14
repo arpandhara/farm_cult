@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const benefitsData = [
   {
     title: 'Water\nEfficient',
@@ -24,12 +26,25 @@ const benefitsData = [
 
 const SmartIntegration = () => {
   useGSAP(() => {
+    // Background Image Animation (Fade in + subtle zoom out)
+    gsap.from('.si-bg-image', {
+      scrollTrigger: {
+        trigger: '.smart-integration-section',
+        start: 'top 80%',
+      },
+      scale: 1.1,
+      opacity: 0,
+      duration: 1.5,
+      ease: 'power2.out',
+    });
+
     gsap.from('.si-heading, .si-desc', {
       scrollTrigger: {
         trigger: '.smart-integration-section',
         start: 'top 75%',
       },
       y: 30,
+      delay: 0.2, // Reduced from 1 so it doesn't take too long to appear after the image
       opacity: 0,
       duration: 1,
       stagger: 0.15,
@@ -39,7 +54,7 @@ const SmartIntegration = () => {
     gsap.from('.benefit-card', {
       scrollTrigger: {
         trigger: '.si-cards-grid',
-        start: 'top 80%',
+        start: 'top 65%',
       },
       y: 40,
       opacity: 0,
@@ -52,11 +67,11 @@ const SmartIntegration = () => {
   return (
     <section className="smart-integration-section relative flex flex-col justify-center pt-24 pb-16 overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-black"> {/* Added bg-black so it's not white before loading */}
         <img
           src="/whyFarmCult/growSmarterBannerimg.jpg"
           alt="Smart Integration Background"
-          className="w-full h-full object-cover"
+          className="si-bg-image w-full h-full object-cover" // Added 'si-bg-image' class here
         />
         <div className="absolute inset-0 bg-black/70" />
       </div>

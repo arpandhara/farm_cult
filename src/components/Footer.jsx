@@ -8,23 +8,23 @@ const Footer = () => {
     {
       title: 'Solutions',
       links: [
-        { label: 'Passive Income Model', path: '/' },
-        { label: 'Turnkey End-to-End', path: '/' },
-        { label: 'Education & Training', path: '/' },
+        { label: 'Passive Income Model', path: '/solutions' },
+        { label: 'Turnkey End-to-End', path: '/solutions' },
+        { label: 'Education & Training', path: '/solutions' },
       ]
     },
     {
       title: 'Resources',
       links: [
-        { label: 'Blogs', path: '/' },
-        { label: 'Case-studies', path: '/' },
+        { label: 'Blogs', path: '/resources' },
+        { label: 'Case-studies', path: '/resources' },
       ]
     },
     {
       title: 'Discover',
       links: [
         { label: 'Why Farmcult', path: '/why-farmcult' },
-        { label: 'Technology', path: '/' },
+        { label: 'Technology', path: '/technology' },
       ]
     },
     {
