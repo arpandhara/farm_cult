@@ -9,6 +9,10 @@ import Home from './pages/Home';
 import WhyFarmcult from './pages/WhyFarmcult';
 import Technology from './pages/Technology';
 import './index.css';
+import Blogs from './pages/Blogs';
+import CaseStudies from './pages/CaseStudies';
+import Blog from './pages/[...Blog]';
+import CaseStudy from './pages/[...CaseStudy]';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +37,10 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/why-farmcult" element={<WhyFarmcult />} />
         <Route path="/technology" element={<Technology />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/blog/:id" element={<Blog />} />
+        <Route path="/case-study/:id" element={<CaseStudy />} />
       </Routes>
     </AnimatePresence>
   );

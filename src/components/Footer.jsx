@@ -16,8 +16,8 @@ const Footer = () => {
     {
       title: 'Resources',
       links: [
-        { label: 'Blogs', path: '/resources' },
-        { label: 'Case-studies', path: '/resources' },
+        { label: 'Blogs', path: '/blogs' },
+        { label: 'Case-studies', path: '/case-studies' },
       ]
     },
     {
