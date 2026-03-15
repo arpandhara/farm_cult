@@ -46,7 +46,7 @@ const FarmcultMedia = () => {
       className="media-section w-full px-[5%] py-16 lg:py-24 bg-white min-h-[70vh] flex flex-col" 
       ref={sectionRef}
     >
-      <h2 className="media-heading text-[clamp(1.8rem,3vw,2.5rem)] font-normal text-text-primary leading-[1.1] mb-12 lg:mb-16">
+      <h2 className="media-heading text-[clamp(1.8rem,4vw,3rem)] font-normal text-text-primary leading-[1.1] mb-12 lg:mb-16">
         Farmcult in the Media
       </h2>
 

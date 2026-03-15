@@ -70,7 +70,7 @@ const Solutions = () => {
     <section className="solutions-section flex flex-col lg:flex-row bg-[#ECECEC] px-[5%] py-[80px] lg:py-[100px] min-h-[80vh] gap-12 lg:gap-[5%] items-start" ref={sectionRef}>
       
       <div className="solutions-left flex-1 lg:flex-none lg:w-[25%] lg:max-w-[350px] mb-0 text-center lg:text-left w-full">
-        <h2 className="solutions-title text-[clamp(2rem,3.5vw,2.5rem)] font-semibold mb-6 text-text-primary leading-[1.2]">
+        <h2 className="solutions-title text-[clamp(2rem,4vw,3rem)] font-medium mb-6 text-text-primary leading-[1.2]">
           Our Solutions
         </h2>
         <p className="solutions-desc text-base text-[#333] leading-[2] max-w-[600px] mx-auto lg:mx-0">
